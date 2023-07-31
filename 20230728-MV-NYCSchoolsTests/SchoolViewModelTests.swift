@@ -21,11 +21,13 @@ class SchoolViewModelTests: XCTestCase {
     }
     
     override func tearDown() {
+        
         viewModel = nil
         super.tearDown()
     }
     
     func test_getNumberOfSchools() {
+        
         viewModel.schools = [school]
         XCTAssertEqual(viewModel.getNumberOfSchools(), 1)
     }
