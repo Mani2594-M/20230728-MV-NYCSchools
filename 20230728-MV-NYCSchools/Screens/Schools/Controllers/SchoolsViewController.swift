@@ -10,7 +10,6 @@ import UIKit
 class SchoolsViewController: UIViewController {
     
     @IBOutlet weak var schoolsTableView: UITableView!
-    
     private var viewModel = SchoolViewModel()
     
     override func viewDidLoad() {
@@ -80,6 +79,7 @@ extension SchoolsViewController: UITableViewDataSource {
 extension SchoolsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let school = viewModel.getSchool(index: indexPath.row)
         performSegue(withIdentifier: SegueConstants.schoolDetails, sender: school)
     }
